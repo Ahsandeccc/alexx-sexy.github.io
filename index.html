@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex - Official Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('alex-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+      backdrop-filter: brightness(0.6);
+    }
+    section {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1, h2, h3, p {
+      text-align: center;
+    }
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .plan {
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+    .faq {
+      margin-top: 40px;
+    }
+    .faq details {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Welcome to Alex's Official Page</h1>
+    <p>Hi, I'm Alex. I offer exclusive online content and premium memberships.</p>
+  </section>
+
+  <section>
+    <h2>Membership Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic</h3>
+        <p>₹499 / month</p>
+        <button onclick="window.location.href='payment.html'">Pay & See</button>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3>
+        <p>₹999 / month</p>
+        <button onclick="window.location.href='payment.html'">Pay & See</button>
+      </div>
+      <div class="plan">
+        <h3>Lifetime</h3>
+        <p>₹4999 / one-time</p>
+        <button onclick="window.location.href='payment.html'">Pay & See</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details>
+      <summary>What do I get with membership?</summary>
+      <p>Exclusive content, behind-the-scenes access, and more!</p>
+    </details>
+    <details>
+      <summary>Can I cancel anytime?</summary>
+      <p>Yes, monthly plans can be cancelled anytime.</p>
+    </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>Click "Pay & See" to choose your payment method.</p>
+    </details>
+  </section>
+</body>
+</html>

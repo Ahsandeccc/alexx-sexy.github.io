@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Alex</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('alex-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+      backdrop-filter: brightness(0.6);
+    }
+    section {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .payment-method {
+      margin-top: 20px;
+      background: #f0f0f0;
+      color: black;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .payment-method h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Choose Your Payment Method</h2>
+    <div>
+      <button onclick="showMethod('bank')">Bank Transfer</button>
+      <button onclick="showMethod('usdt')">USDT</button>
+      <button onclick="showMethod('qr')">QR Code (Easy Method)</button>
+    </div>
+
+    <div id="bank" class="payment-method" style="display:none;">
+      <h3>Bank Transfer</h3>
+      <p>Bank: RBL Bank</p>
+      <p>Account No: 309025699740</p>
+      <p>IFSC Code: RATN0000450</p>
+    </div>
+
+    <div id="usdt" class="payment-method" style="display:none;">
+      <h3>USDT (TRC20)</h3>
+      <p>Wallet Address: TKjsJ3z5GCPXTSqwfGUJZkvkiSsMH9gfWE</p>
+    </div>
+
+    <div id="qr" class="payment-method" style="display:none;">
+      <h3>Scan & Pay using PhonePe</h3>
+      <img src="qr-code.jpg" alt="QR Code" style="max-width:200px;">
+    </div>
+  </section>
+
+  <script>
+    function showMethod(method) {
+      document.getElementById('bank').style.display = 'none';
+      document.getElementById('usdt').style.display = 'none';
+      document.getElementById('qr').style.display = 'none';
+      document.getElementById(method).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
